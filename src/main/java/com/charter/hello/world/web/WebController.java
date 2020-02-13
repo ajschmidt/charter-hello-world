@@ -7,11 +7,13 @@ import java.net.URI;
 
 @RestController
 public class WebController {
+    private static HelloWorldResponse theMessage = new HelloWorldResponse();
+
     @GetMapping(value = "/hello",
             consumes = {"application/json"},
             produces = {"application/json"})
     @ResponseBody HelloWorldResponse hello(){
-        return new HelloWorldResponse("Hello World!");
+        return theMessage;
     }
     @PostMapping(value = "/hello",
         consumes = {"application/json"},
@@ -21,6 +23,7 @@ public class WebController {
         {
             message = new HelloWorldResponse("Say hello in your POST body.");
         }
-        return message;
+        theMessage = message;
+        return theMessage;
     }
 }
