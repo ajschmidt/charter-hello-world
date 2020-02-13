@@ -13,4 +13,16 @@ public class HelloWorldResponse {
     public HelloWorldResponse(String message){
         this.message = message;
     }
+
+    public HelloWorldResponse(){
+        this.message = "Hello World!";
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public String getMessage() {
+        return this.message;
+    }
 }

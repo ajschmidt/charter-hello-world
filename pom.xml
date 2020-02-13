@@ -12,8 +12,9 @@
 
     <groupId>com.charter.hello.world</groupId>
     <artifactId>charter-hello-world</artifactId>
+    <name>Hello Back WS</name>
+    <description>Repeats the message you send</description>
     <version>0.0.1-SNAPSHOT</version>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -22,8 +23,15 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.18</version>
+            <version>1.18.2</version>
         </dependency>
     </dependencies>
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>
